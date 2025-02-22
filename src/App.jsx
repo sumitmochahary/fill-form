@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import ToggleButton from './components/ToggleButton'
+import Form from './components/Form'
 
 function App() {
 
@@ -11,8 +11,10 @@ function App() {
   }
 
   return (
-    <ToggleButton />
-  )
+    <div>
+      {isChanged ? <button onClick={change}>Fill Form</button> : <Form />}
+    </div>
+  );
 }
 
 export default App
